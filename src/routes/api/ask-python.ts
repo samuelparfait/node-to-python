@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
       .json({ error: 'Invalid input: "numbers" should be an array.' });
   }
 
-  const pyScriptPath = getAbsolutePath('src/scripts/sum.py');
+  const pyScriptPath = getAbsolutePath('src/scripts/process.py');
 
   try {
     const result = await processor(pyScriptPath, { numbers });

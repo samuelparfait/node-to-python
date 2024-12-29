@@ -1,7 +1,7 @@
 import express from 'express';
 
-import { errorHandler } from '@/lib/middlewares';
-import askPython from '@/routes/ask-python';
+import { errorHandler } from '@/middleware/error-handler';
+import askPython from '@/routes/api/ask-python';
 
 const app = express();
 
@@ -15,3 +15,5 @@ const port = process.env.PORT || 3001;
 const server = app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`);
 });
+
+export default server;
